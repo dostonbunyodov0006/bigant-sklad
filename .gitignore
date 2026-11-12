@@ -1,0 +1,14 @@
+node_modules/
+.wrangler/
+*.log
+.dev.vars
+.env
+dist/
+app/node_modules/
+app/dist/
+
+# Маълумот — репозиторийга КИРМАЙДИ
+seed/
+*.xlsx
+*.xls
+sinov-cheklar/

@@ -1,0 +1,11 @@
+{
+  "name": "bigant-sklad",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Telegram bot + Mini App: ombor (sklad) hisobi — qarzdorlik, to'lovlar, chek o'qish, Excel",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  }
+}

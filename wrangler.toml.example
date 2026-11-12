@@ -1,0 +1,32 @@
+# Telegram бот воркери — намуна. Нусхалаб `wrangler.toml` қилинг.
+# ⚠️ Бу файлдаги ҳамма id НАМУНА. Ҳақиқийларини ўзингиз ёзасиз.
+name = "bigant-sklad-bot"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+[vars]
+# Склад ишчи гуруҳи (бот шу гуруҳдан файл ва чекларни ўқийди)
+OMBOR_GURUH = "-1001000000001"
+# Ботда «Склад» менюси кўринсинми (0 — йўқ, 1 — ҳа)
+OMBOR_BOT_MENYU = "0"
+# Чек/платёжка ўқийдиган моделлар — вергул билан, биринчиси асосий
+CHEK_MODEL = "@cf/mistralai/mistral-small-3.1-24b-instruct,@cf/qwen/qwen3.8-27b"
+# Битта моделни кутиш чегараси (сония)
+CHEK_MODEL_SEKUND = "25"
+
+[ai]
+binding = "AI"
+
+[[kv_namespaces]]
+binding = "ACCESS_KV"
+id = "00000000000000000000000000000000"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bigant"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+# Махфийлар — файлга ЁЗИЛМАЙДИ, буйруқ билан қўйилади:
+#   npx wrangler secret put BOT_TOKEN
+#   npx wrangler secret put GEMINI_API_KEY   (ихтиёрий — заҳира ўқувчи)
